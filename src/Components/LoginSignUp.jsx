@@ -17,27 +17,29 @@ const LoginSignUp = () => {
             <div className="text">{action}</div>
             <div className="underline"></div>
           </div>
-          <div className="inputs">
-            {action==="Login" ? <div></div> :  <div className="input">
-              <img src={user_icon} alt="" />
-              <input type="text"  placeholder="Name"/>
-            </div>}
-          
-            <div className="input">
-              <img src={email_icon} alt="" />
-              <input type="eamil"  placeholder="E-mail Id"/>
+          <form>
+            <div className="inputs">
+              {action==="Login" ? <div></div> :  <div className="input">
+                <img src={user_icon} alt="" />
+                <input type="text"  placeholder="Name"/>
+              </div>}
+            
+              <div className="input">
+                <img src={email_icon} alt="" />
+                <input type="eamil"  placeholder="E-mail Id"/>
+              </div>
+              <div className="input">
+                <img src={password_icon} alt="" />
+                <input type="password"  placeholder="Password"/>
+              </div>
             </div>
-            <div className="input">
-              <img src={password_icon} alt="" />
-              <input type="password"  placeholder="Password"/>
+            {action=== "Sign Up" ? <div></div> : <div className="forget-password">Forget Password ? <span>Click Here !</span></div>  }
+            
+            <div className="submit-container">
+              <button className={action==="Login" ? "submit gray" : "submit"} onClick={()=>setAction("Sign Up")}>Sign Up</button>
+              <button className={action==="Sign Up" ? "submit gray" : "submit"} onClick={()=>setAction("Login")}>Login</button>
             </div>
-          </div>
-          {action=== "Sign Up" ? <div></div> : <div className="forget-password">Forget Password ? <span>Click Here !</span></div>  }
-          
-          <div className="submit-container">
-            <button className={action==="Login" ? "submit gray" : "submit"} onClick={()=>setAction("Sign Up")}>Sign Up</button>
-            <button className={action==="Sign Up" ? "submit gray" : "submit"} onClick={()=>setAction("Login")}>Login</button>
-          </div>
+          </form>   
         </div>
       </div>
     </>
