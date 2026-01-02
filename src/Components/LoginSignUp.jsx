@@ -1,4 +1,4 @@
-import "./LoginSignUp-style.css"
+import "./loginSignUp-style.css"
 
 import user_icon from '../assets/images/person.png'
 import email_icon from '../assets/images/email.png'
